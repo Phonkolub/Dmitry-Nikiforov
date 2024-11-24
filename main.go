@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"os"
 	"strings"
 
@@ -12,7 +11,7 @@ import (
 func main() {
 	text := &text.Text{}
 	scanner := bufio.NewScanner(os.Stdin)
-	fmt.Println("Hello")
+
 	for scanner.Scan() {
 		text.Content = scanner.Text()
 
