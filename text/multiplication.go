@@ -63,7 +63,7 @@ func (t *Text) Multiplication_conditions() {
 		perv_0 := razdel_0[0]
 		vtor_0 := razdel_0[1]
 		number_0, _ := strconv.Atoi(vtor_0)
-		if number_0 > 10 {
+		if number_0 <= 0 || number_0 > 10 {
 			panic("Калькулятор должен принимать на вход числа от 1 до 10 включительно, не более!")
 		}
 
