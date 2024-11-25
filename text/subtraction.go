@@ -96,15 +96,17 @@ func (t *Text) subtraction() {
 	}
 
 	t.Content = strings.ReplaceAll(newline, vichet, "\"")
-	if strings.Count(t.Content, "\"\"") == 1 {
-
+	if strings.Count(t.Content, "\"\"\"") == 1 {
+		fmt.Println(t.Content)
 		t.Content = strings.ReplaceAll(t.Content, "\"\"\"", " ")
 		fmt.Println(t.Content)
 	} else {
 
 		//заменяем двойные кавычки между словами на пробелы
 		t.Content = strings.ReplaceAll(t.Content, "\"\"", " ")
+		fmt.Println(t.Content)
 		t.Content = strings.ReplaceAll(t.Content, "\"", "")
+		fmt.Println(t.Content)
 		fmt.Printf("%q \n", t.Content)
 	}
 }
